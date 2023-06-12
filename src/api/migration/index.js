@@ -7,7 +7,7 @@ import { schema } from './model'
 export Migration, { schema } from './model'
 
 const router = new Router()
-const { name, status, version } = schema.tree
+const { name, status, version, databaseName } = schema.tree;
 
 /**
  * @api {post} /migrations Create migration
@@ -29,8 +29,8 @@ router.post('/',
   create)
 
 router.post('/migration',
-  token({ required: true }),
-  body({ name, status, version }),
+  token({ required: false }),
+  body({ name, status, version, databaseName }),
   executeMigration)
 
 /**

@@ -41,7 +41,8 @@ const config = {
   test: { },
   development: {
     mongo: {
-      uri: 'mongodb://localhost/mongo-migrations-dev',
+      // uri: 'mongodb://localhost/mongo-migrations-dev',
+      uri: 'mongodb://localhost/test',
       options: {
         debug: true
       }
