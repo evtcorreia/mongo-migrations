@@ -16,7 +16,9 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "setupFilesAfterEnv": ["<rootDir>/test/setup.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ]
   },
   "devDependencies": {
     "apidoc": "^0.20.0",
@@ -46,6 +48,7 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/register": "^7.9.0",
     "@babel/runtime": "^7.9.0",
+    "@sendgrid/mail": "^6.5.4",
     "bcrypt": "^4.0.1",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
@@ -55,6 +58,7 @@
     "express": "^4.17.1",
     "express-force-ssl": "^0.3.2",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
     "mongoose": "^5.9.4",
     "mongoose-keywords": "^0.4.0",
     "morgan": "^1.9.1",
@@ -66,7 +70,5 @@
     "rand-token": "^0.4.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.5"
-,
-    "@sendgrid/mail": "^6.5.4"
   }
 }

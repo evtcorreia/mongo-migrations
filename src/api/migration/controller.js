@@ -18,12 +18,18 @@ export const create = ({ bodymen: { body } }, res, next) =>
 
 export const executeMigration = async ({ bodymen: { body } }, res, next) => {
   try {
+    // console.log(' db --> ',db);
+    // console.log( 'client --> ',client);
+    // console.log("teste");
+    runMigrations(body);
+    // execMigration(db, body.name);
   } catch (error) {
     console.log(error);
   }
 };
 
-async function runMigrations(body) {
+export async function runMigrations(body) {
+  console.log(body);
   try {
     const migrationDirectory = path.join(__dirname, "migrations");
     const migrationFiles = fs.readdirSync(migrationDirectory);
