@@ -14,7 +14,7 @@ const migrationDirectory = path.join(__dirname, 'src/api/migration/migrations')
     } else if (command === 'rollback') {
       await rollbackMigrations()
     } else if (command === 'create') {
-      gerarArquivoEstrutura(fileMigration)
+      fileModelMigration(fileMigration)
     } else {
       console.log(`Invalid command: ${command}`)
     }
@@ -71,7 +71,7 @@ async function rollbackMigrations() {
   console.log('Rollback not implemented yet.')
 }
 
-function gerarArquivoEstrutura(fileMigration) {
+function fileModelMigration(fileMigration) {
   const caminhoArquivo = `./src/api/migration/migrations/migration_sprint_${fileMigration}.js`
   const conteudo = `const ready = false
 
