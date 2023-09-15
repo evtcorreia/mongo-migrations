@@ -8,7 +8,7 @@ const migrationDirectory = path.join(__dirname, 'src/api/migration/migrations')
 ;(async function () {
   try {
     const [command, fileMigration] = process.argv.slice(2)
-    //teste
+    
     if (command === 'migrate') {
       await runMigrations(fileMigration)
     } else if (command === 'rollback') {
